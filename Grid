@@ -1,0 +1,248 @@
+---HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+    </div>
+</body>
+</html>
+
+----CSS-----
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: auto;
+    border:4px solid rgb(153, 243, 9);
+    /*its display the container border of 4px */
+    
+    /*GRID is powerfull tool for creating two dimensional layout on the web.
+    its apply on rows and colunms*/
+    display:grid;
+    /*apply the grid on child items of the container */
+
+    row-gap:5px;
+    /*its the gap between rows*/
+
+    column-gap:10px;
+    /*its create the gap between colunms*/
+
+    /* gap: 10px; */
+    /*its create the gap between rows and colunms and its by default property which is apply on both */
+
+    /* grid-template-columns: 100px 10em 10% 10fr; */
+    /*its gap between columns and define the size and number of columns in grid layout*/
+
+    grid-template-columns: 200px 200px 200px;
+     grid-template-rows: 100px 100px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /*repeat pattern of columns or row tracks
+             repeat(count,value) 
+    count is for how many columns should be there 
+    and value is the size of ecach track(row, columns)  */
+
+    /* grid-template-columns: repeat(auto-fill,100px); */
+    /*repat function */
+
+/* grid-template-columns: auto auto; */
+/*it take size of  columns or rows according to container */
+
+/* grid-template-columns: auto 10%; */
+/* auto is to acc to container size and 10px is size for another columns*/
+
+/* grid-template-columns:  1fr auto auto; */
+/*1fr is size of first columns and another 2 auto are for another 2 columns acc to container size*/
+
+/* grid-template-rows: 200px  1fr; */
+/*same as columns*/
+
+/* grid-auto-rows: 80px; */
+
+/*JUSTIFY-CONTENT is used to align the grid container items horizontally within the grid container. its apply on the rows*/
+/* justify-content: center; */
+/*all items are placed at the center*/
+
+/* justify-content: end; */
+/*all item are placed at the end of the container*/
+
+/* justify-content: start; */
+/*(default) aligns items to the start of the container*/
+
+/* justify-content: space-around; */
+/*distributes items with equal space around them*/
+
+/* justify-content: space-between; */
+/* distributes items with equal space between them*/
+
+/* justify-content: space-evenly; */
+/*distributes items with equal sapce between and around them*/
+
+/* justify-content: stretch; */
+/*stretches items to fill the container (items grow to fill the space)*/
+
+/*ALIGN-CONTENT is used to align the grid container items vertically within the grid container. its apply on the columns*/
+/* align-content: center; */
+/*aligns items in center through cross axis or y axis*/
+
+/* align-content: stretch; */
+/*stretch items through cross axis or y axis*/
+
+/* align-content: start; */
+ /*aligns items in start through cross axis or y axis*/
+
+/* align-content: space-evenly; */
+/*space evenly between rows through cross axis or y axis*/
+
+/* align-content: space-between; */
+/*space between items through cross axis or y axis*/
+
+/* align-content: space-around; */
+/* space around items through cross axis or y axis*/
+
+/* align-content: end; */
+
+/*aligns items in ends through cross axis or y axis*/
+
+
+/*ALIGN-ITEMS property is used to align items along the block (vertical) axis with their grid area*/
+
+/* align-items:end ; */
+/* align items to the end of the grid area(bottom) */
+
+/* align-items:start */
+/* align items to the start of the grid area(top) */
+
+/* align-items:center */
+/* align items to the center of the grid area */
+
+/* align-items: stretch */
+/* stretches items to fill the grid area(default) */
+
+/* GRID-TEMPLATE-AREAS
+ grid layout using grid-template-areas and places different elements into specified areas of the grid using the grid-area property.
+ create a grid with header, sidebar, main content, and footer areas. */
+/* grid-template-areas: " hr hr hr"
+                     "sbr main main"
+                    "ftr ftr ftr"; */
+
+ } 
+.box{ 
+    border: 2px solid rgb(7, 7, 105);
+     padding: 12px;
+    
+     }
+    /* #box-1{
+        grid-area: hr;
+        }
+
+        #box-2{
+            grid-area: sbr;
+    }
+    #box-3{
+        grid-area: main;
+    }
+    #box-4{
+        grid-area: ftr;
+    } */
+    #box-3{
+        background-color: burlywood;
+        
+        /* JUSTIFY-SELF property is used to align an individual grid item along the horizontal axis within its grid area */
+
+        /* justify-self: center; */
+        /* Aligns the item to the center of its grid area. */
+
+        /* justify-self: end; */
+        /*Aligns the item to the end of its grid area (right).  */
+
+        /* justify-self: start; */
+        /* Aligns the item to the start of its grid area (left). */
+
+        /* justify-self: stretch; */
+        /* Stretches the item to fill the grid area (default). */
+
+
+        }
+        #box-4{
+             background-color: aquamarine;
+            /* ALIGN-SELF properyis used to alig an individual grid item along the vertical axis within its grid area */
+
+            /* align-self: center; */
+            /*Aligns the item to the center of its grid area.  */
+           
+            /* align-self: start; */
+            /*Aligns the item to the start of its grid area (top).  */
+
+            /* align-self: end; */
+            /* Aligns the item to the end of its grid area (bottom). */
+
+            /* align-self: stretch; */
+            /* Stretches the item to fill the grid area (default). */
+}
+
+#box-8{
+    background-color: chartreuse;
+    /* GRID-COLUMNS property to grid items to controls their positioning, alignment, and sizing within the grid layout  */
+    grid-column-start:1 ;
+    /* starts on the 1st column line  */
+
+    grid-column-end: 4;
+    /* Ends on the 4th column line */
+
+     /* grid-column: 1/4; */
+     /* shorthand properties for setting both start and end lines in one declaration
+     start on the 1st column line and ends on the 4th column line */
+    
+}
+#box-1{
+    background-color: crimson;
+        /* GRID-ROWS property to grid items to controls their positioning, alignment, and sizing within the grid layout  */
+     grid-row-start: 1;
+     /* start on the 1st row line */
+
+     grid-row-end:1;
+     /* ends on the 4th row line */
+
+     /* grid-row:1/4 ; */
+     /* shorthand property for setting both start and end lines in one declaration */
+ 
+     /* grid-row: 1/span 3; */ 
+     /* same as grid row */
+     /* /* height: 400px; */
+}
+ #box-2{
+    background-color: yellow;
+    height:4,00px;
+    grid-area: 2/2/3/4;
+    /* 2 is start of row,2 is start of columns,3 is end of row, 4 is end of column */
+}  
+
+#box-7{
+    background-color: darkred;
+   grid-column: 1/4;
+   /*1 is start of column, 4 is end of column  */
+}
+#box-6{
+    background-color: blueviolet;
+    grid-area: 2/1/4/2;
+}
+#box-5{
+    background-color: tomato;
+    grid-area:1/3/7/4 ;
+}
